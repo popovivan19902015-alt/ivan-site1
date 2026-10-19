@@ -20,7 +20,6 @@ COPY invoice/src /app/invoice/src
 COPY invoice/fonts /app/invoice/fonts
 COPY invoice/data /app/invoice/data
 COPY server /app/server
-COPY data /app/data
 COPY --from=web /web/dist /app/client/dist
 COPY porsche.jpg /app/client/dist/porsche.jpg
 
