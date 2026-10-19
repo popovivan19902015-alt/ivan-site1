@@ -1,0 +1,14 @@
+services:
+  shop:
+    build: .
+    image: ivan-shop
+    ports:
+      - "8090:8090"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8090
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

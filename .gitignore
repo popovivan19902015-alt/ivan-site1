@@ -1,0 +1,29 @@
+# Секреты
+.env
+.env.*
+!.env.example
+
+# Зависимости и сборка
+node_modules/
+dist/
+client/dist/
+
+# Локальные заказы: имена и телефоны клиентов
+data/orders.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Редактор и система
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+
+# Сгенерированные файлы
+invoice/output/
+*.pdf
+*.log

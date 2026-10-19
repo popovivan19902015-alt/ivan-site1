@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Иван — software engineer. Сайт-визитка: разработка, архитектура, автоматизация."
+    />
+    <title>Иван — Software engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=11" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="nav">
+      <a class="mark" href="#top">И.</a>
+      <nav>
+        <a href="#shop">Товары</a>
+        <a href="#work">Работа</a>
+        <a href="#skills">Навыки</a>
+        <a href="#contact">Контакт</a>
+        <a href="admin.html">Админка</a>
+        <button class="nav-cart" type="button" id="nav-cart">Корзина</button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Сайт-визитка · Software engineer</p>
+          <h1>Иван</h1>
+          <p class="lead">
+            Пишу код, который держит нагрузку и читается через год.
+            Веб, сервисы, автоматизация — без лишнего шума.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Написать</a>
+            <a class="btn ghost" href="#work">Что делаю</a>
+          </div>
+          <dl class="meta">
+            <div>
+              <dt>Роль</dt>
+              <dd>Software engineer</dd>
+            </div>
+            <div>
+              <dt>Формат</dt>
+              <dd>Проекты и консультации</dd>
+            </div>
+            <div>
+              <dt>Язык</dt>
+              <dd>Русский · English</dd>
+            </div>
+          </dl>
+        </div>
+        <figure class="hero-visual">
+          <img
+            src="porsche.jpg"
+            alt="Porsche 964 Singer, вид сзади"
+            width="1600"
+            height="900"
+          />
+        </figure>
+      </section>
+
+      <section id="work" class="block">
+        <header class="block-head">
+          <h2>Чем занимаюсь</h2>
+          <p>Коротко, без портфолио на десять экранов.</p>
+        </header>
+        <div class="cards">
+          <article class="card">
+            <span class="idx">01</span>
+            <h3>Веб и интерфейсы</h3>
+            <p>
+              Лендинги, кабинеты, внутренние инструменты. Чистая вёрстка,
+              понятная навигация, быстрая загрузка.
+            </p>
+          </article>
+          <article class="card">
+            <span class="idx">02</span>
+            <h3>Сервисы и API</h3>
+            <p>
+              Backend, интеграции, данные. Стабильные эндпоинты и понятная
+              структура проекта.
+            </p>
+          </article>
+          <article class="card">
+            <span class="idx">03</span>
+            <h3>Автоматизация</h3>
+            <p>
+              Скрипты и пайплайны, которые снимают рутину: сборки, отчёты,
+              ручные шаги в процессе.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="block skills">
+        <header class="block-head">
+          <h2>Стек</h2>
+          <p>То, с чем работаю каждый день.</p>
+        </header>
+        <ul class="tags">
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>Python</li>
+          <li>HTML / CSS</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>REST API</li>
+          <li>Git</li>
+        </ul>
+      </section>
+
+      <section id="shop" class="block">
+        <header class="block-head shop-head">
+          <div>
+            <h2>Товары</h2>
+            <p>Соберите корзину и оформите заказ: имя, телефон, затем WhatsApp или Telegram.</p>
+          </div>
+          <div class="shop-actions">
+            <button class="btn ghost" type="button" id="open-cart">Корзина</button>
+            <button class="btn primary" type="button" id="open-create">+ Новый товар</button>
+          </div>
+        </header>
+        <input
+          class="catalog-search"
+          id="catalog-search"
+          type="search"
+          placeholder="Найти по названию или описанию"
+          autocomplete="off"
+          aria-label="Поиск товара"
+        />
+        <div class="product-grid" id="catalog"></div>
+      </section>
+
+      <section id="contact" class="block contact">
+        <header class="block-head">
+          <h2>Связаться</h2>
+          <p>Опишите задачу в паре абзацев — отвечу по сути.</p>
+        </header>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:ivan@example.com">
+            <span>Почта</span>
+            <strong>ivan@example.com</strong>
+          </a>
+          <a class="contact-card" href="https://t.me/username" target="_blank" rel="noopener noreferrer">
+            <span>Telegram</span>
+            <strong>@username</strong>
+          </a>
+          <a class="contact-card" href="https://github.com/username" target="_blank" rel="noopener noreferrer">
+            <span>GitHub</span>
+            <strong>github.com/username</strong>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Иван. Сайт-визитка.</p>
+      <a href="#top">Наверх</a>
+    </footer>
+
+    <div class="modal" id="modal" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <header class="modal-head">
+          <h2 id="modal-title">Новый товар</h2>
+          <button class="icon-x" type="button" id="modal-close" aria-label="Закрыть">×</button>
+        </header>
+        <form id="product-form" class="stack-form">
+          <input type="hidden" id="product-id" />
+          <label>
+            Название
+            <input id="product-name" name="name" required autocomplete="off" />
+          </label>
+          <div class="form-row">
+            <label>
+              Цена
+              <input id="product-price" name="price" type="number" min="0" step="0.01" required />
+            </label>
+            <label>
+              Валюта
+              <select id="product-currency" name="currency">
+                <option value="RUB">Рубли (₽)</option>
+                <option value="KZT">Тенге (₸)</option>
+                <option value="USD">Доллары ($)</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Количество
+              <input id="product-qty" name="qty" type="number" min="0" step="1" value="1" required />
+            </label>
+            <label>
+              Тип
+              <select id="product-type" name="type">
+                <option value="product">Товар</option>
+                <option value="service">Услуга</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            Описание
+            <textarea id="product-desc" name="description" rows="4"></textarea>
+          </label>
+          <label class="photo-label">
+            Фото
+            <span class="photo-drop" id="photo-drop">Выбрать файл</span>
+            <input id="product-photo" type="file" accept="image/*" hidden />
+          </label>
+          <button class="btn primary form-submit" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="cart-modal" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <header class="modal-head">
+          <h2 id="cart-title">Корзина</h2>
+          <button class="icon-x" type="button" id="cart-close" aria-label="Закрыть">×</button>
+        </header>
+        <div id="cart-body" class="cart-body"></div>
+        <button class="btn primary form-submit" type="button" id="cart-checkout">Оформить заказ</button>
+      </div>
+    </div>
+
+    <div class="modal" id="order-modal" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="order-title">
+        <header class="modal-head">
+          <h2 id="order-title">Оформление заказа</h2>
+          <button class="icon-x" type="button" id="order-close" aria-label="Закрыть">×</button>
+        </header>
+        <form id="order-form" class="stack-form">
+          <p class="order-summary" id="order-summary"></p>
+          <label>
+            Имя
+            <input id="order-name" name="name" required minlength="2" autocomplete="name" />
+          </label>
+          <label>
+            Номер телефона
+            <input id="order-phone" name="phone" type="tel" required inputmode="tel" autocomplete="tel" placeholder="+7" />
+          </label>
+          <div class="order-channels">
+            <button class="btn primary" type="submit" data-channel="whatsapp">WhatsApp</button>
+            <button class="btn telegram" type="submit" data-channel="telegram">Telegram</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <p class="toast" id="toast" hidden></p>
+    <div class="chat-widget">
+      <section class="chat-panel" id="chat-panel" hidden>
+        <button class="chat-resize chat-resize-y" type="button" id="chat-resize-y" aria-label="Изменить высоту"></button>
+        <button class="chat-resize chat-resize-x" type="button" id="chat-resize-x" aria-label="Изменить ширину"></button>
+        <header class="chat-head">
+          <div>
+            <strong>Иван</strong>
+            <span>AI-консультант</span>
+          </div>
+          <button class="icon-x" type="button" id="chat-close" aria-label="Закрыть чат">×</button>
+        </header>
+        <div class="chat-log" id="chat-log"></div>
+        <div class="chat-attach" id="chat-attach" hidden></div>
+        <form class="chat-form" id="chat-form">
+          <button class="chat-plus" type="button" id="chat-plus" aria-label="Прикрепить файл">+</button>
+          <input id="chat-file" type="file" multiple hidden />
+          <input id="chat-input" type="text" placeholder="Напишите вопрос" autocomplete="off" />
+          <button class="btn primary" type="submit">Отправить</button>
+        </form>
+      </section>
+      <button class="chat-launcher" type="button" id="chat-open" aria-label="Открыть чат с Иваном">
+        Чат
+      </button>
+    </div>
+    <script src="store.js?v=9"></script>
+    <script src="script.js?v=14"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Админка — товары, заказы и клиенты</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=10" />
+  </head>
+  <body class="admin-body">
+    <header class="admin-bar">
+      <div class="admin-brand">
+        <h1>Админка</h1>
+        <div class="admin-tabs" role="tablist">
+          <button type="button" id="tab-products" class="is-active" role="tab" aria-selected="true">Товары</button>
+          <button type="button" id="tab-orders" role="tab" aria-selected="false">Заказы</button>
+          <button type="button" id="tab-clients" role="tab" aria-selected="false">Клиенты</button>
+        </div>
+      </div>
+      <button class="btn primary" type="button" id="open-create">+ Новый товар</button>
+    </header>
+    <main class="admin-main">
+      <div class="product-grid" id="admin-list"></div>
+      <div class="orders-list" id="orders-list" hidden></div>
+      <div class="clients-list" id="clients-list" hidden></div>
+    </main>
+    <p class="admin-foot"><a href="index.html">На сайт</a></p>
+
+    <div class="modal" id="modal" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <header class="modal-head">
+          <h2 id="modal-title">Новый товар</h2>
+          <button class="icon-x" type="button" id="modal-close" aria-label="Закрыть">×</button>
+        </header>
+        <form id="product-form" class="stack-form">
+          <input type="hidden" id="product-id" />
+          <label>
+            Название
+            <input id="product-name" name="name" required autocomplete="off" />
+          </label>
+          <div class="form-row">
+            <label>
+              Цена
+              <input id="product-price" name="price" type="number" min="0" step="0.01" required />
+            </label>
+            <label>
+              Валюта
+              <select id="product-currency" name="currency">
+                <option value="KZT">Тенге (₸)</option>
+                <option value="USD">Доллары ($)</option>
+                <option value="RUB" selected>Рубли (₽)</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Количество
+              <input id="product-qty" name="qty" type="number" min="0" step="1" value="1" required />
+            </label>
+            <label>
+              Тип
+              <select id="product-type" name="type">
+                <option value="product">Товар</option>
+                <option value="service">Услуга</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            Описание
+            <textarea id="product-desc" name="description" rows="4"></textarea>
+          </label>
+          <label class="photo-label">
+            Фото
+            <span class="photo-drop" id="photo-drop">Выбрать файл</span>
+            <input id="product-photo" type="file" accept="image/*" hidden />
+          </label>
+          <button class="btn primary form-submit" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <script src="store.js?v=9"></script>
+    <script src="admin.js?v=7"></script>
+  </body>
+</html>
