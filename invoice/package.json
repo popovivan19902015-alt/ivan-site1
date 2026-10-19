@@ -1,0 +1,15 @@
+{
+  "name": "elektrik-market-invoice",
+  "private": true,
+  "type": "module",
+  "description": "Счёт-фактура PDF для интернет-магазина Электрик·Маркет",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "invoice": "node src/generateInvoice.js data/order.json"
+  },
+  "dependencies": {
+    "pdfkit": "^0.17.1"
+  }
+}
